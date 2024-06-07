@@ -39,7 +39,7 @@ const ceoStatement = () => {
       </Head>
       <TransitionEffect />
 
-      <Paginator prevLink="/contents" nextLink="/weAreAxxela" />
+      <Paginator prevLink="/contents" nextLink="/about" />
 
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout>
@@ -178,7 +178,7 @@ const ceoStatement = () => {
             </div>
           </section>
 
-          <Footer prevLink="/contents" nextLink="/weAreAxxela" />
+          <Footer prevLink="/contents" nextLink="/about" />
         </Layout>
       </main>
     </>

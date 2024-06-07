@@ -21,7 +21,7 @@ const AnimatedTextHeader = ({ text, className = '' }) => {
   return (
     <div>
       <motion.h1
-        className={`inline-block w-full text-light font-bold uppercase text-6xl md:text-4xl sm:text-4xl ${className}`}
+        className={`inline-block w-full text-partnership dark:text-light font-bold uppercase text-5xl md:text-4xl sm:text-4xl ${className}`}
         variants={quote}
         initial="hidden"
         animate="visible"

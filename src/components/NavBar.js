@@ -126,7 +126,7 @@ const NavBar = () => {
 
       <div
         id="cardContainer"
-        className="fixed top-0 right-0 h-full w-0 overflow-hidden bg-background bg-opacity-50 backdrop-blur-lg shadow-lg transition-all duration-300 z-50 dark:bg-dark"
+        className="fixed top-0 right-0 h-full w-0 overflow-hidden bg-background bg-opacity-90 backdrop-blur-lg shadow-lg transition-all duration-300 z-50 dark:bg-dark"
       >
         <button
           id="closeButton"
@@ -168,8 +168,33 @@ const NavBar = () => {
                 <polyline points="9 22 9 12 15 12 15 22" />
               </svg>
               <CustomLink
-                href="/"
+                href="/contents"
                 title="Home"
+                className="text-base font-medium"
+              />
+            </div>
+
+            <div className="w-full h-auto flex items-center gap-x-4 text-partnership hover:text-gray-100 hover:bg-partnership rounded-md px-4 py-3 ease-out duration-500 cursor-pointer dark:text-light">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-podcast"
+              >
+                <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
+                <path d="M8 14a5 5 0 1 1 8 0" />
+                <circle cx="12" cy="11" r="1" />
+                <path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z" />
+              </svg>
+              <CustomLink
+                href="/ceoStatement"
+                title="CEO Statement"
                 className="text-base font-medium"
               />
             </div>
@@ -197,56 +222,6 @@ const NavBar = () => {
               <CustomLink
                 href="/about"
                 title="About this Report"
-                className="text-base font-medium"
-              />
-            </div>
-
-            <div className="w-full h-auto flex items-center gap-x-4 text-partnership hover:text-gray-100 hover:bg-partnership rounded-md px-4 py-3 ease-out duration-500 cursor-pointer dark:text-light">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-scroll-text"
-              >
-                <path d="M15 12h-5" />
-                <path d="M15 8h-5" />
-                <path d="M19 17V5a2 2 0 0 0-2-2H4" />
-                <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" />
-              </svg>
-              <CustomLink
-                href="/contents"
-                title="Contents"
-                className="text-base font-medium"
-              />
-            </div>
-
-            <div className="w-full h-auto flex items-center gap-x-4 text-partnership hover:text-gray-100 hover:bg-partnership rounded-md px-4 py-3 ease-out duration-500 cursor-pointer dark:text-light">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-podcast"
-              >
-                <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
-                <path d="M8 14a5 5 0 1 1 8 0" />
-                <circle cx="12" cy="11" r="1" />
-                <path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z" />
-              </svg>
-              <CustomLink
-                href="/ceoStatement"
-                title="CEO Statement"
                 className="text-base font-medium"
               />
             </div>
