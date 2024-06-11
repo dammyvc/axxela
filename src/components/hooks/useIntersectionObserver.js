@@ -9,7 +9,7 @@ const useIntersectionObserver = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 } // Adjust the threshold as needed
+      { threshold: 0.1 } // Adjust the threshold as needed
     );
 
     if (ref.current) {

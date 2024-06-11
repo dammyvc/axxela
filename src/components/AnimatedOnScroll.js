@@ -17,7 +17,7 @@ const AnimatedOnScroll = ({ children, className = '' }) => {
       initial="hidden"
       animate={isVisible ? 'visible' : 'hidden'}
       variants={variants}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
       className={className}
     >
       {children}

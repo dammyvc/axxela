@@ -10,15 +10,17 @@ const AnimatedIntro = () => {
         <VideoComponent className="absolute inset-0 z-10" />
 
         <div>
-          <div className="absolute top-2/4 w-full flex justify-around text-partnership font-mont font-bold z-20  sm:flex-col sm:m-[10px] sm:justify-between sm:space-y-32 sm:top-28">
-            <p className="text-2xl">
+          <div className="absolute top-2/4 w-full flex justify-around text-dark dark:text-light font-mont font-bold z-20  sm:flex-col sm:m-[10px] sm:justify-between sm:space-y-32 sm:top-[15rem]">
+            <p className="text-2xl font-normal">
               Axxela 2023 <br /> Sustainability Report
             </p>
             <h1 className="text-4xl sm:text-2xl">
-              Empowering Today, Preserving Tomorrow: <br /> Sustainable Energy
-              for Future Generations
+              <span className="text-partnership dark:text-vision">
+                Empowering Today, Preserving Tomorrow:
+                <br /> Sustainable Energy for Future Generations
+              </span>
             </h1>
-            <Link className="text-2xl" href="/contents">
+            <Link className="text-2xl font-semibold" href="/contents">
               Explore Report <LinkArrow className={'w-6 ml-1'} />{' '}
             </Link>
           </div>
