@@ -15,9 +15,12 @@ const AnimatedIntro = () => {
               Axxela 2023 <br /> Sustainability Report
             </p>
             <h1 className="text-4xl sm:text-2xl">
-              <span className="text-partnership dark:text-vision">
-                Empowering Today, Preserving Tomorrow:
-                <br /> Sustainable Energy for Future Generations
+              <span className="text-partnership dark:text-growth font-bold">
+                Empowering Today, Preserving Tomorrow:&nbsp;
+                <br className="sm:hidden" />
+                <span className="font-medium text-dark dark:text-light">
+                  Sustainable Energy for Future Generations
+                </span>
               </span>
             </h1>
             <Link className="text-2xl font-semibold" href="/contents">

@@ -9,6 +9,14 @@ import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import Renewable from '@/components/Renewable';
 import SimpleLineChart from '@/components/Renewable';
+import RightImagePlacement from '@/components/RightImagePlacement';
+import LeftImagePlacement from '@/components/LeftImagePlacement';
+
+const firstParagraph = `We prioritise environmental protection and minimise our impact on ecosystems throughout our operations. This includes comprehensive environmental impact studies and social assessments during project planning and pre-construction phases. Continuous environmental monitoring and regular audits are conducted by independent environmental consultants, adhering to statutory requirements and international best practices. Our facilities are not situated in protected areas, and our operations do not have additional adverse effects on biodiversity. We use existing transport infrastructure and our activities do not contribute to atmospheric pollutants or introduce new invasive species. Our commitment lies in ensuring minimal impact beyond necessary land conversion.`;
+
+const secondParagraph = ` Our day-to-day administrative operations have no water-related impacts. Water is primarily used for office cleaning, drinking, handwashing, and other sanitary purposes. We source water either from underground water tables via boreholes or obtain it from vendors for drinking water.`;
+
+const thirdParagraph = `At Axxela, we conduct thorough environmental and social impact assessments to ensure responsible and sustainable operations. This includes addressing actual negative impacts such as natural gas emissions and CO<sub>2</sub> emissions from various sources. Mitigation measures involve reducing energy inefficiencies, conducting baseline integrity surveys, and contributing to carbon sequestration efforts. Environmental, Social, and Governance (ESG) targets and objectives are set, with quarterly GHG data reviews and an emergency response team on standby for gas leak incidents. Stakeholder engagement initiatives focus on continuous improvement, including installing markers along Right of Way and collaborating with government agencies to monitor encroachment. These efforts showcase our dedication to minimising environmental impact and prioritising stakeholder welfare.`;
 
 const anitext = {
   hidden: {
@@ -49,219 +57,88 @@ const environmentalStewardship = () => {
             backgroundImage="/images/content/environmental_stewardship.jpeg"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border max-w-none min-h-[136px] max-h-none border-solid border-black border-0">
-            <div className="flex flex-auto w-full rounded-[inherit] max-w-none">
-              <div className="flex flex-wrap my-0 mx-auto w-full justify-between rounded-[inherit]">
-                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 rounded-l-[inherit] !basis-[calc(33.3333%+0px)] !max-w-[calc(33.3333%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]">
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[136px] max-h-none border-solid border-black border-0 mb-[51px]">
+            <div className="flex flex-auto w-full max-w-[1024px] rounded-[inherit]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-center border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
                   <div
-                    className="flex flex-auto rounded-[inherit] pt-[50px] pl-[3.59712vw] pr-[3.59712vw] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pl-[6.4vw] sm:pr-[6.4vw]"
+                    className="flex flex-auto rounded-[inherit] pt-[80px] pl-[50px] pr-[50px] md:pt-[24px] md:pl-[50px] md:pr-[50px] sm:pt-[24px] sm:pl-[24px] sm:pr-[24px]"
                     style={{
-                      flexDirection: 'inherit',
-                      justifyContent: 'inherit',
                       alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
                     }}
                   >
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
+                    <div
+                      className="flex w-full"
                       style={{
-                        animationFillMode: 'backwards',
-                        flex: 'unset',
                         flexDirection: 'inherit',
+                        alignItems: 'inherit',
                       }}
-                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
                     >
-                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-dark dark:text-light mb-[0.625em] text-xl font-bold">
-                        Biodiversity Conservation Initiatives
-                      </h4>
+                      <hr className="w-[51px] border-b-[2px] border-solid border-sustainable dark:border-vision mt-0 mb-[16px] max-w-full box-border inline-block relative border-t-0 border-r-0 border-l-0" />
+                    </div>
 
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        We prioritise environmental protection and minimise our
-                        impact on the ecosystem throughout our operations. Our
-                        approach includes comprehensive environmental impact
-                        studies and social assessments during the project
-                        planning and pre-construction phases, continuous
-                        environmental monitoring &#40;quarterly or
-                        biannually&#41;, regular audits, and compliance checks.
-                        Independent environmental consultants conduct these
-                        assessments according to statutory requirements and
-                        international best practices.
-                      </p>
-
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        Our facilities are not located in protected areas, and
-                        our operations do not have additional adverse effects on
-                        biodiversity beyond the conversion of one acre of land
-                        for the TGNL gas facility in Ibefun, Ogun State,
-                        Nigeria. We use existing transport infrastructure built
-                        by the Federal Government, and our activities do not
-                        contribute to atmospheric pollutants, introduce new
-                        invasive species or pests, reduce species, or change
-                        ecological processes outside the natural range of
-                        variation.
-                      </p>
-                    </motion.div>
-                  </div>
-                </div>
-
-                <div className="flex relative flex-col grow shrink max-h-full box-border bg-grey1 dark:bg-grey9 text-start justify-start border-solid border-black border-0 !basis-[calc(33.3333%+0px)] !max-w-[calc(33.3333%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]">
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[50px] pl-[3.59712vw] pr-[3.59712vw] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pl-[6.4vw] sm:pr-[6.4vw]"
-                    style={{
-                      flexDirection: 'inherit',
-                      justifyContent: 'inherit',
-                      alignItems: 'flex-start',
-                    }}
-                  >
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
-                      style={{
-                        animationFillMode: 'backwards',
-                        flex: 'unset',
-                        flexDirection: 'inherit',
-                      }}
+                    <div
                       className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+                      style={{ flex: 'unset' }}
                     >
-                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-dark dark:text-light mb-[0.625em] text-xl font-bold">
-                        Water Management
+                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-partnership dark:text-light text-lg font-normal">
+                        At Axxela, we continuously refine our approach to
+                        managing greenhouse gas &#40;GHG&#41; emissions to align
+                        with the latest global standards and ensure
+                        environmental sustainability.
                       </h4>
-
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        Our day-to-day administrative operations have no
-                        water-related impacts. Water is primarily used for
-                        office cleaning, drinking, handwashing, and other
-                        sanitary purposes. We source water either from
-                        underground water tables via boreholes or obtain it from
-                        vendors for drinking water.
-                      </p>
-                    </motion.div>
-                  </div>
-                </div>
-
-                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 rounded-l-[inherit] !basis-[calc(33.3333%+0px)] !max-w-[calc(33.3333%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]">
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[50px] pl-[3.59712vw] pr-[3.59712vw] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pl-[6.4vw] sm:pr-[6.4vw]"
-                    style={{
-                      flexDirection: 'inherit',
-                      justifyContent: 'inherit',
-                      alignItems: 'flex-start',
-                    }}
-                  >
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
-                      style={{
-                        animationFillMode: 'backwards',
-                        flex: 'unset',
-                        flexDirection: 'inherit',
-                      }}
-                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
-                    >
-                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-dark dark:text-light mb-[0.625em] text-xl font-bold">
-                        Sustainable Practices for Reduced Carbon Emissions
-                      </h4>
-
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        At Axxela, we conduct a comprehensive assessment of our
-                        environmental and social impact to ensure responsible
-                        and sustainable operations. This assessment covers both
-                        actual negative impacts on the environment, such as
-                        natural gas emissions, CO<sup>2</sup> emissions from
-                        electricity, commuting, and diesel consumption, as well
-                        as potential negative impacts on people, like increased
-                        natural gas emissions and fire incidents. To address
-                        these impacts, we implement various mitigation measures,
-                        including reducing inefficiencies in energy usage,
-                        conducting baseline integrity and pipeline leak surveys,
-                        and actively contributing to carbon sequestration
-                        efforts.
-                      </p>
-
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        Additionally, we set Environmental, Social, and
-                        Governance &#40;ESG&#41; targets and objectives, request
-                        GHG data quarterly for review, and maintain an emergency
-                        response team on standby to address reported gas leaks
-                        promptly. Our stakeholder engagement initiatives lead to
-                        continuous improvement, with measures such as installing
-                        markers along Right of Way, conducting sensitisation
-                        sessions, and collaborating with government agencies to
-                        monitor encroachment. These efforts demonstrate our
-                        commitment to minimising environmental impact and
-                        prioritising stakeholder well-being.
-                      </p>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border max-w-none min-h-[136px] max-h-none border-solid border-black border-0">
-            <div className="flex flex-auto w-full rounded-[inherit] max-w-none">
-              <div className="flex flex-wrap my-0 mx-auto w-full justify-between rounded-[inherit]">
-                <div className="flex relative flex-col grow shrink max-h-full box-border bg-background dark:bg-grey7 text-start justify-start border-solid border-black border-0 rounded-l-[inherit] !basis-[calc(50%+0px)] !max-w-[calc(50%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]">
+          <RightImagePlacement
+            text={firstParagraph}
+            backgroundImage="/images/misc/biodiversity.jpg"
+            backgroundColor="bg-[rgba(199,213,34,0.5)] dark:bg-[rgba(199,213,34,0.2)]"
+            textColor="text-partnership dark:text-light"
+          />
+
+          <LeftImagePlacement
+            text={secondParagraph}
+            backgroundImage="/images/misc/water.jpg"
+            backgroundColor="bg-light dark:bg-dark"
+            textColor="text-partnership dark:text-light"
+          />
+
+          <RightImagePlacement
+            text={thirdParagraph}
+            backgroundImage="/images/misc/environment.jpg"
+            backgroundColor="bg-[rgba(245,208,0,0.5)] dark:bg-[rgba(245,208,0,0.2)]"
+            textColor="text-partnership dark:text-light"
+          />
+
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+            <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
                   <div
-                    className="flex flex-auto rounded-[inherit] pt-[50px] pl-[3.59712vw] pr-[3.59712vw] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pl-[6.4vw] sm:pr-[6.4vw]"
+                    className="flex flex-auto rounded-[inherit] pt-[40px] pl-[0px] pr-[0px] md:pt-[80px] md:pl-[10.01vw] md:pr-[10.01vw] sm:pt-[80px] sm:pl-[3.20427vw] sm:pr-[3.20427vw]"
                     style={{
-                      flexDirection: 'inherit',
-                      justifyContent: 'inherit',
                       alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
                     }}
                   >
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
-                      style={{
-                        animationFillMode: 'backwards',
-                        flex: 'unset',
-                        flexDirection: 'inherit',
-                      }}
-                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+                    <div
+                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
+                      style={{ flex: 'unset' }}
                     >
-                      <SimpleLineChart />
-                    </motion.div>
-                  </div>
-                </div>
-
-                <div className="flex relative flex-col grow shrink max-h-full box-border bg-background dark:bg-grey7 text-start justify-start border-solid border-black border-0 !basis-[calc(50%+0px)] !max-w-[calc(50%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]">
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[50px] pl-[3.59712vw] pr-[3.59712vw] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pl-[6.4vw] sm:pr-[6.4vw]"
-                    style={{
-                      flexDirection: 'inherit',
-                      justifyContent: 'inherit',
-                      alignItems: 'flex-start',
-                    }}
-                  >
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
-                      style={{
-                        animationFillMode: 'backwards',
-                        flex: 'unset',
-                        flexDirection: 'inherit',
-                      }}
-                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
-                    >
-                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-dark dark:text-light mb-[0.625em] text-xl font-bold">
-                        Water Management
-                      </h4>
-
-                      <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-dark dark:text-light font-light text-base">
-                        Our day-to-day administrative operations have no
-                        water-related impacts. Water is primarily used for
-                        office cleaning, drinking, handwashing, and other
-                        sanitary purposes. We source water either from
-                        underground water tables via boreholes or obtain it from
-                        vendors for drinking water.
+                      <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-lg font-semibold">
+                        Total energy consumption within the organisation from
+                        renewable sources
                       </p>
-                    </motion.div>
+                    </div>
+                    <div className="max-w-full w-full mb-[8px]"></div>
                   </div>
                 </div>
               </div>

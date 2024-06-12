@@ -5,12 +5,12 @@ import Layout from '@/components/Layout';
 import Paginator from '@/components/Paginator';
 import Hero from '@/components/Hero';
 
-import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import RightImagePlacement from '@/components/RightImagePlacement';
 import LeftImagePlacement from '@/components/LeftImagePlacement';
 import Survey from '@/components/Survey';
-import { EconomicImpactsTable, TaxTransparencyTable } from '@/components/Table';
+import TaxBar from '@/components/TaxBar';
+import EconomicImpactBar from '@/components/EconomicImpactBar';
 
 const firstParagraph = `Despite challenging gas supply conditions, Axxela achieved a minor decrease of less than 1&#37; in gas sales, from **840 MMSCM** in 2022 to **833 MMSCM** in 2023, thanks to strategic customer service and proactive business management. We commissioned the **GL5 Phase 1 backbone project**, extending our gas pipeline network in the Greater Lagos Industrial Area to approximately 178 km, creating local employment opportunities. Adherence to International Finance Corporation&#39;s (IFC) Performance Standards led to an impressive **7.7 million LTI man-hours** without incidents. Axxela supported economic inclusion by providing financial donations and scholarships, benefiting **100 pupils** through &#34;Back-to-School&#34; initiatives in 2023. <br /> <br />Acknowledging climate change risks, we have implemented robust risk mitigation strategies, including comprehensive insurance, emergency response planning, and superior health and safety protocols. We also emphasise sustainability by setting benchmarks for environmental, social, and governance practices to reduce our climate impact. Extreme weather conditions pose both risks and opportunities for Axxela, with elevated power demands potentially driving revenue growth if managed effectively. Our commitment to sustainable development and strategic planning aims to mitigate climate risks and ensure resilient operations.`;
 
@@ -19,22 +19,6 @@ const secondParagraph = `Axxela faces a wide array of sustainability-related ris
 const thirdParagraph = `Axxela's Enterprise Risk Management (ERM) Framework is fundamental for evaluating sustainability-related risks, encompassing identification, assessment, and mitigation strategies. Supplemented by policies on stakeholder management, environmental documentation, and corporate social responsibility, the framework guides risk management and monitoring. The evaluation process integrates diverse inputs, including historical records, operational plans, and industry insights, to categorise risks, assess impacts, and develop mitigation strategies. Scenario analysis is used to understand sustainability risks, with inputs from internal stakeholders and evaluations across socio-economic, regulatory, and environmental domains.<br /> <br /> A holistic approach is adopted, considering both qualitative and quantitative factors, such as financial implications and ESG metrics. Rigorous methodologies, including stakeholder analysis and environmental and social impact assessments, ensure robust risk management with clear roles and responsibilities. Sustainability risks are prioritised due to their interconnectedness with broader business risks, impacting operational continuity and reputation. Proactive management of these risks within the ERM framework provides Axxela with a competitive advantage.`;
 
 const fourthParagraph = `We have integrated tax compliance into our corporate framework, ensuring adherence to all relevant tax laws and regulations. Our strategy focuses on minimising tax exposure legally while meeting all tax obligations on time. The Financial Controller, reporting to the CFO, is responsible for tax management, emphasising our commitment to regulatory compliance. Recognising the critical role of tax compliance in the oil and gas industry, we engage qualified tax experts and consultants to assess risks, maintaining zero tolerance for non-compliance.<br /> <br />We educate our employees on the importance of tax compliance through regular updates in management meetings, fostering a culture of commitment to compliance. Our Risk and Internal Control team conducts regular checks to identify any tax infractions. We value our relationships with tax authorities, viewing them as partners, and maintain strong, professional interactions with prompt responses to their correspondences.<br /> <br />Our open-door policy ensures transparency with financial records accessible to regulators for verification. We actively participate in forums and discussions on tax issues, contributing our perspectives to regulatory matters.`;
-
-const anitext = {
-  hidden: {
-    opacity: 0,
-    x: -20,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.7,
-      ease: 'easeInOut',
-      delay: 0.8,
-    },
-  },
-};
 
 const economicContributions = () => {
   return (
@@ -154,7 +138,7 @@ const economicContributions = () => {
             textColor="text-partnership dark:text-light"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-white dark:bg-dark max-h-none border-solid border-black border-0 mb-[24px]">
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
             <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
               <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
                 <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
@@ -167,15 +151,15 @@ const economicContributions = () => {
                     }}
                   >
                     <div
-                      className="relative w-full rounded-none text-partnership dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
                       style={{ flex: 'unset' }}
                     >
                       <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-lg font-semibold">
                         Our Economic Impact
                       </p>
                     </div>
-                    <div className="max-w-full w-full mb-[8px] !items-stretch">
-                      <EconomicImpactsTable />
+                    <div className="max-w-full w-full mb-[8px]">
+                      <EconomicImpactBar />
                     </div>
                   </div>
                 </div>
@@ -190,7 +174,7 @@ const economicContributions = () => {
             textColor="text-partnership dark:text-light"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(108,175,199,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-5">
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
             <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
               <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
                 <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
@@ -203,15 +187,15 @@ const economicContributions = () => {
                     }}
                   >
                     <div
-                      className="relative w-full rounded-none text-partnership dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
                       style={{ flex: 'unset' }}
                     >
                       <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-lg font-semibold">
                         Our Tax Figures
                       </p>
                     </div>
-                    <div className="max-w-full w-full mb-[8px] !items-stretch">
-                      <TaxTransparencyTable />
+                    <div className="max-w-full w-full mb-[8px]">
+                      <TaxBar />
                     </div>
                   </div>
                 </div>
