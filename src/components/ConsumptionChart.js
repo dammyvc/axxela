@@ -3,11 +3,10 @@ import { LineChart } from '@mui/x-charts/LineChart';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const valueFormatter = (value) => `${value}(GJ)`;
-export default function NonRenewableChart() {
-  const gas = [685, 92, 208];
-  const diesel = [3783, 3202, 2645];
-  const petrol = [911, 641, 731];
-  const total = [5379, 3936, 3584];
+export default function ConsumptionChart() {
+  const electricity = [685, 92, 208];
+  const energyIn = [3783, 3202, 2645];
+  const energyOut = [911, 641, 731];
   const xLabels = ['2021', '2022', '2023'];
 
   return (
@@ -15,7 +14,7 @@ export default function NonRenewableChart() {
       <LineChart
         sx={{
           [`.${axisClasses.left} .${axisClasses.label}`]: {
-            transform: 'translate(-10px, 0)',
+            transform: 'translate(-13px, 0)',
             fill: '#000',
           },
           [`.${axisClasses.root}`]: {
@@ -42,30 +41,23 @@ export default function NonRenewableChart() {
         series={[
           {
             curve: 'natural',
-            data: gas,
-            label: 'Gas',
+            data: electricity,
+            label: 'Electricity Consumption',
             color: '#0b3356',
             valueFormatter,
           },
           {
             curve: 'natural',
-            data: diesel,
-            label: 'Diesel',
+            data: energyIn,
+            label: 'Energy Consumption within Organisation',
             color: '#f5d000',
             valueFormatter,
           },
           {
             curve: 'natural',
-            data: petrol,
-            label: 'Petrol',
+            data: energyOut,
+            label: '*Energy Consumption outside Organisation',
             color: '#c7d522',
-            valueFormatter,
-          },
-          {
-            curve: 'natural',
-            data: total,
-            label: 'Total',
-            color: '#6cafc7',
             valueFormatter,
           },
         ]}

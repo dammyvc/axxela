@@ -50,26 +50,40 @@ const weAreAxxela = () => {
             backgroundImage="/images/content/we_are_axxela.jpeg"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[236px] max-h-none px-[50px] border-solid border-black border-0 md:px-[30px] sm:px-[15px]">
-            <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
-              <div className="flex flex-wrap my-0 mx-auto w-full justify-between rounded-[inherit]">
-                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 rounded-[inherit] !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0 sm:grow-0 sm:shrink-0">
-                  <div className="flex flex-auto items-start pt-[72px] pl-0 pr-[32px] md:pt-[53px] md:pl-[24px] md:pr-[24px] sm:pt-[24px] sm:pl-[24px] sm:pr-[24px]">
-                    <motion.div
-                      variants={anitext}
-                      initial="hidden"
-                      animate="visible"
-                      style={{ animationFillMode: 'backwards', flex: 'unset' }}
-                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[136px] max-h-none border-solid border-black border-0 mb-[51px]">
+            <div className="flex flex-auto w-full max-w-[1024px] rounded-[inherit]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-center border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
+                  <div
+                    className="flex flex-auto rounded-[inherit] pt-[80px] pl-[50px] pr-[50px] md:pt-[24px] md:pl-[50px] md:pr-[50px] sm:pt-[24px] sm:pl-[24px] sm:pr-[24px]"
+                    style={{
+                      alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
+                    }}
+                  >
+                    <div
+                      className="flex w-full"
+                      style={{
+                        flexDirection: 'inherit',
+                        alignItems: 'inherit',
+                      }}
                     >
-                      <h4 className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-base font-medium text-dark dark:text-light md:mb-[1.61111em]">
+                      <hr className="w-[51px] border-b-[2px] border-solid border-sustainable dark:border-vision mt-0 mb-[16px] max-w-full box-border inline-block relative border-t-0 border-r-0 border-l-0" />
+                    </div>
+
+                    <div
+                      className="relative w-full rounded-none text-dark dark:text-light border-solid border-black border-0 mb-0 p-0 visible !block"
+                      style={{ flex: 'unset' }}
+                    >
+                      <h4 className="break-words whitespace-pre-wrap p-0 cursor-text relative text-partnership dark:text-light text-lg font-normal">
                         We are Axxela, a dynamic force in the energy and
                         utilities sector, jointly owned by Helios Investment
                         Partners LLP and Sojitz Corporation. Our journey is
                         rooted in a commitment to driving the transition towards
                         sustainable energy solutions for today and tomorrow.
                       </h4>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -357,7 +371,9 @@ const weAreAxxela = () => {
                             className="border border-blue-gray-50 rounded-xl bg-white px-4 py-3 shadow-xl shadow-black/10 text-partnership font-medium"
                             content="Supervisory Control and Data Acquisition (SCADA) systems are used for controlling, monitoring, and analysing industrial devices and processes."
                           >
-                            <span className="bg-vision">SCADA System</span>
+                            <span className="underline decoration-vision decoration-2">
+                              SCADA System
+                            </span>
                           </Tooltip>
                           , and improving our Ecovadis Sustainability Rating
                           from Silver to Gold. Despite challenges such as gas

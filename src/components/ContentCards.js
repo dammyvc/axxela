@@ -22,10 +22,10 @@ const ContentCards = ({ imgSrc, title, description, linkHref }) => {
         </div>
 
         <div className="relative w-full rounded-none p-[40px] bg-partnership dark:bg-light ">
-          <h3 className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-[2rem] font-extrabold text-vision dark:text-partnership">
+          <h3 className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-[2rem] sm:text-[1rem] font-extrabold text-vision dark:text-partnership">
             {title}
           </h3>
-          <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-lg font-light text-light dark:text-dark">
+          <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-lg sm:text-base font-light text-light dark:text-dark">
             {description}
           </p>
           <div
@@ -33,7 +33,7 @@ const ContentCards = ({ imgSrc, title, description, linkHref }) => {
             style={{ flexDirection: 'inherit', alignItems: 'inherit' }}
           >
             <Link className="inline-block mb-[0.55em]" href={linkHref}>
-              <div className="whitespace-pre-wrap relative w-fit rounded-none text-base font-bold text-light dark:text-dark border-solid border-light dark:border-dark border-[4px] py-[12px] px-[20px] visible !inline-block md:text-lg">
+              <div className="whitespace-pre-wrap relative w-fit rounded-none text-base sm:text-sm font-bold text-light dark:text-dark border-solid border-light dark:border-dark border-[4px] py-[12px] px-[20px] visible !inline-block md:text-lg">
                 Go &rarr;
               </div>
             </Link>
