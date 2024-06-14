@@ -44,10 +44,10 @@ const anitext = {
 };
 
 const economicContributions = () => {
-  const [ref1, isVisible1] = useOnScreen({ threshold: 0 });
-  const [ref2, isVisible2] = useOnScreen({ threshold: 0 });
-  const [ref3, isVisible3] = useOnScreen({ threshold: 0 });
-  const [ref4, isVisible4] = useOnScreen({ threshold: 0 });
+  const [ref9, isVisible9] = useOnScreen({ threshold: 0.1 });
+  const [ref10, isVisible10] = useOnScreen({ threshold: 0.1 });
+  const [ref11, isVisible11] = useOnScreen({ threshold: 0.1 });
+  const [ref12, isVisible12] = useOnScreen({ threshold: 0.1 });
 
   return (
     <>
@@ -245,11 +245,11 @@ const economicContributions = () => {
             <div className="flex flex-auto w-full rounded-[inherit]">
               <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
                 <motion.div
-                  ref={ref1}
+                  ref={ref9}
                   className="flex relative flex-col grow shrink max-h-full box-border text-start bg-sustainable dark:bg-[rgba(11,51,86,0.6)] justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)] md:!hidden sm:!hidden"
                   variants={anitext}
                   initial="hidden"
-                  animate={isVisible1 ? 'visible' : 'hidden'}
+                  animate={isVisible9 ? 'visible' : 'hidden'}
                 >
                   <div
                     className="flex flex-auto rounded-[inherit] pt-[10px] pl-[2.15827vw] pr-[2.15827vw] md:pt-[20px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[31px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
@@ -268,13 +268,13 @@ const economicContributions = () => {
                       <div className="relative w-full text-center mb-0 text-partnership dark:text-light text-3xl font-semibold">
                         <div className="inline-block relative">
                           <div className="flex items-center justify-center absolute w-full h-full pr-[12%] pl-[12%] top-0 bottom-0 break-all text-center">
-                            {isVisible1 && (
+                            {isVisible9 && (
                               <CountUp suffix="%" duration={7} end={93} />
                             )}
                           </div>
                           <ProgressBar
                             targetPercentage={93}
-                            start={isVisible1}
+                            start={isVisible9}
                             strokeColor="#f5d000"
                           />
                         </div>
@@ -284,11 +284,11 @@ const economicContributions = () => {
                 </motion.div>
 
                 <motion.div
-                  ref={ref2}
+                  ref={ref10}
                   className="flex relative flex-col grow shrink max-h-full box-border text-start bg-sustainable dark:bg-[rgba(11,51,86,0.6)] justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]"
                   variants={anitext}
                   initial="hidden"
-                  animate={isVisible2 ? 'visible' : 'hidden'}
+                  animate={isVisible10 ? 'visible' : 'hidden'}
                 >
                   <div
                     className="flex flex-auto rounded-[inherit] pt-[30px] pl-[1.5884vw] pr-[3.1768vw] md:pt-[34px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[50px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
@@ -319,11 +319,11 @@ const economicContributions = () => {
                 </motion.div>
 
                 <motion.div
-                  ref={ref3}
+                  ref={ref11}
                   className="flex relative flex-col grow shrink max-h-full box-border text-start bg-[rgba(108,175,199,0.8)] dark:bg-partnership justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)] md:!hidden sm:!hidden"
                   variants={anitext}
                   initial="hidden"
-                  animate={isVisible3 ? 'visible' : 'hidden'}
+                  animate={isVisible11 ? 'visible' : 'hidden'}
                 >
                   <div
                     className="flex flex-auto rounded-[inherit] pt-[10px] pl-[2.15827vw] pr-[2.15827vw] md:pt-[20px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[31px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
@@ -342,13 +342,13 @@ const economicContributions = () => {
                       <div className="relative w-full text-center mb-0 text-partnership dark:text-light text-3xl font-semibold">
                         <div className="inline-block relative">
                           <div className="flex items-center justify-center absolute w-full h-full pr-[12%] pl-[12%] top-0 bottom-0 break-all text-center">
-                            {isVisible3 && (
+                            {isVisible11 && (
                               <CountUp suffix="" duration={7} end={54} />
                             )}
                           </div>
                           <ProgressBar
                             targetPercentage={54}
-                            start={isVisible3}
+                            start={isVisible11}
                             strokeColor="#f5d000"
                           />
                         </div>
@@ -358,11 +358,11 @@ const economicContributions = () => {
                 </motion.div>
 
                 <motion.div
-                  ref={ref4}
+                  ref={ref12}
                   className="flex relative flex-col grow shrink max-h-full box-border text-start bg-[rgba(108,175,199,0.8)] dark:bg-partnership justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]"
                   variants={anitext}
                   initial="hidden"
-                  animate={isVisible4 ? 'visible' : 'hidden'}
+                  animate={isVisible12 ? 'visible' : 'hidden'}
                 >
                   <div
                     className="flex flex-auto rounded-[inherit] pt-[30px] pl-[1.5884vw] pr-[3.1768vw] md:pt-[34px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[50px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
