@@ -3,12 +3,10 @@ import { LineChart } from '@mui/x-charts/LineChart';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const valueFormatter = (value) => `${value}(GJ)`;
-export default function NonRenewableChart() {
-  const gas = [685, 92, 208];
-  const diesel = [3783, 3202, 2645];
-  const petrol = [911, 641, 731];
-  const total = [5379, 3936, 3584];
-  const xLabels = ['2021', '2022', '2023'];
+
+export default function RenewableChart() {
+  const solar = [0.668, 355.963];
+  const xLabels = ['2022', '2023'];
 
   return (
     <div className="w-full h-full pb-20 origin-[0px_0px] scale-[1.44837] md:scale-[1] sm:!scale-[0.45] justify-center">
@@ -33,6 +31,7 @@ export default function NonRenewableChart() {
           legend: {
             labelStyle: {
               fontSize: 10,
+              fill: '#000',
             },
           },
         }}
@@ -42,29 +41,8 @@ export default function NonRenewableChart() {
         series={[
           {
             curve: 'natural',
-            data: gas,
-            label: 'Gas',
-            color: '#0b3356',
-            valueFormatter,
-          },
-          {
-            curve: 'natural',
-            data: diesel,
-            label: 'Diesel',
-            color: '#f5d000',
-            valueFormatter,
-          },
-          {
-            curve: 'natural',
-            data: petrol,
-            label: 'Petrol',
-            color: '#c7d522',
-            valueFormatter,
-          },
-          {
-            curve: 'natural',
-            data: total,
-            label: 'Total',
+            data: solar,
+            label: 'Solar',
             color: '#6cafc7',
             valueFormatter,
           },
@@ -77,7 +55,6 @@ export default function NonRenewableChart() {
             labelStyle: { fontSize: 9 },
           },
         ]}
-        grid={{ vertical: true, horizontal: true }}
       />
     </div>
   );

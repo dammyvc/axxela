@@ -70,7 +70,7 @@ const TaxBar = () => {
           {
             dataKey: 'revenue',
             label: 'Revenues from third-party sales',
-            color: '#f5d000',
+            color: '#6cafc7',
             valueFormatter,
           },
           {
@@ -82,13 +82,13 @@ const TaxBar = () => {
           {
             dataKey: 'assets',
             label: 'Tangible assets other than cash and cash equivalents',
-            color: '#c7d522',
+            color: '#f5d000',
             valueFormatter,
           },
           {
             dataKey: 'incomeTax',
             label: 'Corporate income tax paid on a cash basis',
-            color: '#6cafc7',
+            color: '#76777a',
             valueFormatter,
           },
         ]}

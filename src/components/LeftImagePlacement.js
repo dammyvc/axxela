@@ -58,6 +58,7 @@ const LeftImagePlacement = ({
   backgroundImage,
   backgroundColor,
   textColor,
+  heading,
 }) => {
   const processedText = processTextWithTooltips(text);
 
@@ -94,6 +95,13 @@ const LeftImagePlacement = ({
                     flex: 'unset',
                   }}
                 >
+                  {heading && (
+                    <h2
+                      className={`mb-4 font-bold ${textColor ? textColor : ''}`}
+                    >
+                      {heading}
+                    </h2>
+                  )}
                   <ReactMarkdown
                     className={`break-words whitespace-pre-wrap p-0 cursor-text relative font-normal ${
                       textColor ? textColor : ''

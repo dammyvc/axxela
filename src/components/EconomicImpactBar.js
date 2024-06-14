@@ -66,13 +66,13 @@ const EconomicImpactBar = () => {
           {
             dataKey: 'turnover',
             label: 'Turnover',
-            color: '#f5d000',
+            color: '#c7d522',
             valueFormatter,
           },
           {
             dataKey: 'retained',
             label: 'Retained in business',
-            color: '#c7d522',
+            color: '#0b3356',
             valueFormatter,
           },
         ]}

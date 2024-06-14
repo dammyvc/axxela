@@ -91,7 +91,7 @@ const Survey = () => {
                   className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
                   style={{ flex: 'unset' }}
                 >
-                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light">
+                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
                     91%
                   </h1>
                 </div>
@@ -162,7 +162,7 @@ const Survey = () => {
                   className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
                   style={{ flex: 'unset' }}
                 >
-                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light">
+                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
                     94%
                   </h1>
                 </div>
@@ -239,7 +239,7 @@ const Survey = () => {
                   className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
                   style={{ flex: 'unset' }}
                 >
-                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light">
+                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
                     88%
                   </h1>
                 </div>
@@ -310,7 +310,7 @@ const Survey = () => {
                   className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
                   style={{ flex: 'unset' }}
                 >
-                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light">
+                  <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
                     86%
                   </h1>
                 </div>

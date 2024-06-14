@@ -9,9 +9,12 @@ import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import RightImagePlacement from '@/components/RightImagePlacement';
 import LeftImagePlacement from '@/components/LeftImagePlacement';
-import { RenewableConsumptionTable } from '@/components/Table';
-import NonRenewableChart from '@/components/Renewable';
+import NonRenewableChart from '@/components/NonRenewable';
 import ConsumptionChart from '@/components/ConsumptionChart';
+import RenewableChart from '@/components/Renewable';
+import DirecetmssionsLine from '@/components/DirectEmissionsLine';
+import IndirectemssionsLine from '@/components/IndirectEmissionsLine';
+import EntityEmissions from '@/components/EntityEmissions';
 
 const firstParagraph = `We prioritise environmental protection and minimise our impact on ecosystems throughout our operations. This includes comprehensive environmental impact studies and social assessments during project planning and pre-construction phases. Continuous environmental monitoring and regular audits are conducted by independent environmental consultants, adhering to statutory requirements and international best practices. Our facilities are not situated in protected areas, and our operations do not have additional adverse effects on biodiversity. We use existing transport infrastructure and our activities do not contribute to atmospheric pollutants or introduce new invasive species. Our commitment lies in ensuring minimal impact beyond necessary land conversion.`;
 
@@ -100,6 +103,7 @@ const environmentalStewardship = () => {
           </section>
 
           <RightImagePlacement
+            heading="Biodiversity Conservation Initiatives"
             text={firstParagraph}
             backgroundImage="/images/misc/biodiversity.jpg"
             backgroundColor="bg-[rgba(199,213,34,0.5)] dark:bg-[rgba(199,213,34,0.2)]"
@@ -107,6 +111,7 @@ const environmentalStewardship = () => {
           />
 
           <LeftImagePlacement
+            heading="Water Management"
             text={secondParagraph}
             backgroundImage="/images/misc/water.jpg"
             backgroundColor="bg-light dark:bg-dark"
@@ -114,13 +119,14 @@ const environmentalStewardship = () => {
           />
 
           <RightImagePlacement
+            heading="Sustainable Practices for Reduced Carbon Emissions"
             text={thirdParagraph}
             backgroundImage="/images/misc/environment.jpg"
             backgroundColor="bg-[rgba(245,208,0,0.5)] dark:bg-[rgba(245,208,0,0.2)]"
             textColor="text-partnership dark:text-light"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-white dark:bg-slate-800 max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
             <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
               <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
                 <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
@@ -133,7 +139,7 @@ const environmentalStewardship = () => {
                     }}
                   >
                     <div
-                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
+                      className="relative w-full rounded-none text-partnership dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
                       style={{ flex: 'unset' }}
                     >
                       <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-base font-semibold italic">
@@ -142,7 +148,13 @@ const environmentalStewardship = () => {
                       </p>
                     </div>
                     <div className="max-w-full w-full mb-[8px]">
-                      <RenewableConsumptionTable />
+                      <RenewableChart />
+                      <p className="text-xs text-center italic dark:text-white">
+                        The increase in energy consumption is attributed to our
+                        implementation of full accounting for renewable energy
+                        sources in 2023, considering that the recorded energy
+                        usage for 2022 was not for the full year.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -221,11 +233,103 @@ const environmentalStewardship = () => {
           </section>
 
           <LeftImagePlacement
+            heading="Sustainable Practices for Reduced Carbon Emissions"
             text={fourthParagraph}
             backgroundImage="/images/misc/emissions.jpg"
             backgroundColor="bg-light dark:bg-dark"
             textColor="text-partnership dark:text-light"
           />
+
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-white dark:bg-slate-800 max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+            <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
+                  <div
+                    className="flex flex-auto rounded-[inherit] pt-[40px] pl-[0px] pr-[0px] md:pt-[80px] md:pl-[10.01vw] md:pr-[10.01vw] sm:pt-[80px] sm:pl-[3.20427vw] sm:pr-[3.20427vw]"
+                    style={{
+                      alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
+                    }}
+                  >
+                    <div
+                      className="relative w-full rounded-none text-partnership dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
+                      style={{ flex: 'unset' }}
+                    >
+                      <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-base font-semibold italic">
+                        Direct &#40;Scope 1&#41; GHG emissions
+                      </p>
+                    </div>
+                    <div className="max-w-full w-full mb-[8px]">
+                      <DirecetmssionsLine />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-slate-100 dark:bg-slate-600 max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+            <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
+                  <div
+                    className="flex flex-auto rounded-[inherit] pt-[40px] pl-[0px] pr-[0px] md:pt-[80px] md:pl-[10.01vw] md:pr-[10.01vw] sm:pt-[80px] sm:pl-[3.20427vw] sm:pr-[3.20427vw]"
+                    style={{
+                      alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
+                    }}
+                  >
+                    <div
+                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
+                      style={{ flex: 'unset' }}
+                    >
+                      <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-base font-semibold text-partnership dark:text-light italic">
+                        Energy indirect &#40;Scope 2&#41; GHG emissions
+                      </p>
+                    </div>
+                    <div className="max-w-full w-full mb-[8px]">
+                      <IndirectemssionsLine />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-white dark:bg-slate-800 max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+            <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
+              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
+                <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
+                  <div
+                    className="flex flex-auto rounded-[inherit] pt-[40px] pl-[0px] pr-[0px] md:pt-[80px] md:pl-[10.01vw] md:pr-[10.01vw] sm:pt-[80px] sm:pl-[3.20427vw] sm:pr-[3.20427vw]"
+                    style={{
+                      alignItems: 'flex-start',
+                      justifyContent: 'inherit',
+                      flexDirection: 'inherit',
+                    }}
+                  >
+                    <div
+                      className="relative w-full rounded-none text-light dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
+                      style={{ flex: 'unset' }}
+                    >
+                      <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-base font-semibold text-partnership dark:text-light italic">
+                        GHG emissions by entity
+                      </p>
+                    </div>
+                    <div className="max-w-full w-full mb-[8px]">
+                      <EntityEmissions />
+                      <p className="text-xs text-center italic dark:text-white">
+                        The increase in staff strength and operational
+                        activities contributed to the overall increment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <Footer prevLink="/highpoints" nextLink="/buildingConnections" />
         </Layout>

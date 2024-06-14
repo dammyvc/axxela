@@ -45,7 +45,7 @@ const buildingConnections = () => {
         <Layout>
           <Hero
             text="Building Connections Within Our Network"
-            backgroundImage="/images/content/building_connections.jpg"
+            backgroundImage="/images/content/2023CAF.JPG"
           />
 
           <Footer

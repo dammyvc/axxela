@@ -199,7 +199,7 @@ const contents = () => {
                       }}
                     >
                       <ContentCards
-                        imgSrc="/images/content/building_connections.jpg"
+                        imgSrc="/images/content/2023CAF.JPG"
                         title="Building Connections Within Our Network"
                         description="Our dedication lies in enhancing the welfare of our employees through a range of programs designed to bolster their physical, emotional, and financial wellness."
                         linkHref="/buildingConnections"
