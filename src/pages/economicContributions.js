@@ -4,11 +4,6 @@ import Footer from '../components/Footer';
 import Layout from '@/components/Layout';
 import Paginator from '@/components/Paginator';
 import Hero from '@/components/Hero';
-import ProgressBar from '@/components/ProgressBar';
-import CountUp from 'react-countup';
-import useOnScreen from '@/components/hooks/useOnScreen';
-
-import { motion } from 'framer-motion';
 
 import TransitionEffect from '@/components/TransitionEffect';
 import RightImagePlacement from '@/components/RightImagePlacement';
@@ -16,6 +11,7 @@ import LeftImagePlacement from '@/components/LeftImagePlacement';
 import Survey from '@/components/Survey';
 import TaxBar from '@/components/TaxBar';
 import EconomicImpactBar from '@/components/EconomicImpactBar';
+import Supplier from '@/components/Supplier';
 
 const firstParagraph = `Despite challenging gas supply conditions, Axxela achieved a minor decrease of less than 1&#37; in gas sales, from **840 MMSCM** in 2022 to **833 MMSCM** in 2023, thanks to strategic customer service and proactive business management. We commissioned the **GL5 Phase 1 backbone project**, extending our gas pipeline network in the Greater Lagos Industrial Area to approximately 178 km, creating local employment opportunities. Adherence to International Finance Corporation&#39;s (IFC) Performance Standards led to an impressive **7.7 million LTI man-hours** without incidents. Axxela supported economic inclusion by providing financial donations and scholarships, benefiting **100 pupils** through &#34;Back-to-School&#34; initiatives in 2023. <br /> <br />Acknowledging climate change risks, we have implemented robust risk mitigation strategies, including comprehensive insurance, emergency response planning, and superior health and safety protocols. We also emphasise sustainability by setting benchmarks for environmental, social, and governance practices to reduce our climate impact. Extreme weather conditions pose both risks and opportunities for Axxela, with elevated power demands potentially driving revenue growth if managed effectively. Our commitment to sustainable development and strategic planning aims to mitigate climate risks and ensure resilient operations.`;
 
@@ -27,28 +23,7 @@ const fourthParagraph = `We have integrated tax compliance into our corporate fr
 
 const fifthParagraph = `The objective of managing supply chain materiality is to ensure compliance with our code of conduct and environmental and social mandates. This entails selecting materials that minimise environmental impact and ensuring suppliers adhere to ethical labor practices and human rights standards. Contracts and pricing agreements are negotiated for optimal value, with material inspection occurring before and upon delivery. Service Level Agreements (SLAs) with aligned Key Performance Indicators (KPIs) support contract execution. We obtain mill test or Factory Acceptance Test (FAT) certificates and engage offshore inspection agents for foreign materials. Our goal is to maintain rejection rates below 5% through consistent pre-engagement checks. Early stakeholder engagement facilitates appropriate product specifications for certification. The company spends 93% of its procurement budget to local suppliers in Nigeria and screens new suppliers meticulously based on environmental and social criteria, resulting in zero negative social impacts in 2023.`;
 
-const anitext = {
-  hidden: {
-    opacity: 0,
-    x: -20,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.7,
-      ease: 'easeInOut',
-      delay: 0.8,
-    },
-  },
-};
-
 const economicContributions = () => {
-  const [ref9, isVisible9] = useOnScreen({ threshold: 0.1 });
-  const [ref10, isVisible10] = useOnScreen({ threshold: 0.1 });
-  const [ref11, isVisible11] = useOnScreen({ threshold: 0.1 });
-  const [ref12, isVisible12] = useOnScreen({ threshold: 0.1 });
-
   return (
     <>
       <Head>
@@ -241,159 +216,7 @@ const economicContributions = () => {
             textColor="text-partnership dark:text-light"
           />
 
-          <section className="flex w-full justify-center min-h-[302px] max-h-none relative rounded-[inherit] box-border max-w-none border-0">
-            <div className="flex flex-auto w-full rounded-[inherit]">
-              <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
-                <motion.div
-                  ref={ref9}
-                  className="flex relative flex-col grow shrink max-h-full box-border text-start bg-sustainable dark:bg-[rgba(11,51,86,0.6)] justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)] md:!hidden sm:!hidden"
-                  variants={anitext}
-                  initial="hidden"
-                  animate={isVisible9 ? 'visible' : 'hidden'}
-                >
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[10px] pl-[2.15827vw] pr-[2.15827vw] md:pt-[20px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[31px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
-                    style={{
-                      alignItems: 'center',
-                      justifyContent: 'inherit',
-                    }}
-                  >
-                    <div
-                      className="flex w-full"
-                      style={{
-                        flexDirection: 'inherit',
-                        alignItems: 'inherit',
-                      }}
-                    >
-                      <div className="relative w-full text-center mb-0 text-partnership dark:text-light text-3xl font-semibold">
-                        <div className="inline-block relative">
-                          <div className="flex items-center justify-center absolute w-full h-full pr-[12%] pl-[12%] top-0 bottom-0 break-all text-center">
-                            {isVisible9 && (
-                              <CountUp suffix="%" duration={7} end={93} />
-                            )}
-                          </div>
-                          <ProgressBar
-                            targetPercentage={93}
-                            start={isVisible9}
-                            strokeColor="#f5d000"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  ref={ref10}
-                  className="flex relative flex-col grow shrink max-h-full box-border text-start bg-sustainable dark:bg-[rgba(11,51,86,0.6)] justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]"
-                  variants={anitext}
-                  initial="hidden"
-                  animate={isVisible10 ? 'visible' : 'hidden'}
-                >
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[30px] pl-[1.5884vw] pr-[3.1768vw] md:pt-[34px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[50px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
-                    style={{
-                      alignItems: 'flex-start',
-                      justifyContent: 'inherit',
-                      flexDirection: 'inherit',
-                    }}
-                  >
-                    <div
-                      className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
-                      style={{ flex: 'unset' }}
-                    >
-                      <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
-                        93%
-                      </h1>
-                    </div>
-                    <div
-                      className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
-                      style={{ flex: 'unset' }}
-                    >
-                      <p className="break-words whitespace-pre-wrap p-0 cursor-text relative text-start font-normal text-normal text-partnership dark:text-light md:text-center">
-                        of our procurement budget spent on local suppliers based
-                        in Nigeria.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  ref={ref11}
-                  className="flex relative flex-col grow shrink max-h-full box-border text-start bg-[rgba(108,175,199,0.8)] dark:bg-partnership justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)] md:!hidden sm:!hidden"
-                  variants={anitext}
-                  initial="hidden"
-                  animate={isVisible11 ? 'visible' : 'hidden'}
-                >
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[10px] pl-[2.15827vw] pr-[2.15827vw] md:pt-[20px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[31px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
-                    style={{
-                      alignItems: 'center',
-                      justifyContent: 'inherit',
-                    }}
-                  >
-                    <div
-                      className="flex w-ful"
-                      style={{
-                        flexDirection: 'inherit',
-                        alignItems: 'inherit',
-                      }}
-                    >
-                      <div className="relative w-full text-center mb-0 text-partnership dark:text-light text-3xl font-semibold">
-                        <div className="inline-block relative">
-                          <div className="flex items-center justify-center absolute w-full h-full pr-[12%] pl-[12%] top-0 bottom-0 break-all text-center">
-                            {isVisible11 && (
-                              <CountUp suffix="" duration={7} end={54} />
-                            )}
-                          </div>
-                          <ProgressBar
-                            targetPercentage={54}
-                            start={isVisible11}
-                            strokeColor="#f5d000"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  ref={ref12}
-                  className="flex relative flex-col grow shrink max-h-full box-border text-start bg-[rgba(108,175,199,0.8)] dark:bg-partnership justify-center border-solid border-black border-0 !basis-[calc(25%+0px)] !max-w-[calc(25%+0px)] md:grow-0 md:shrink-0 md:!basis-[calc(100%+0px)] md:!max-w-[calc(100%+0px)] sm:grow-0 sm:shrink-0 sm:!basis-[calc(100%+0px)] sm:!max-w-[calc(100%+0px)]"
-                  variants={anitext}
-                  initial="hidden"
-                  animate={isVisible12 ? 'visible' : 'hidden'}
-                >
-                  <div
-                    className="flex flex-auto rounded-[inherit] pt-[30px] pl-[1.5884vw] pr-[3.1768vw] md:pt-[34px] md:pl-[6.51042vw] md:pr-[6.51042vw] sm:pt-[50px] sm:pl-[13.3333vw] sm:pr-[13.3333vw]"
-                    style={{
-                      alignItems: 'flex-start',
-                      justifyContent: 'inherit',
-                      flexDirection: 'inherit',
-                    }}
-                  >
-                    <div
-                      className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
-                      style={{ flex: 'unset' }}
-                    >
-                      <h1 className="break-words whitespace-pre-wrap p-0 cursor-text relative font-normal text-4xl text-start md:text-center text-partnership dark:text-light invisible sm:!visible">
-                        54
-                      </h1>
-                    </div>
-                    <div
-                      className="relative w-full rounded-none text-center mb-0 p-0 text-partnership dark:text-light border-solid border-black border-0 visible !block"
-                      style={{ flex: 'unset' }}
-                    >
-                      <p className="break-words whitespace-pre-wrap p-0 cursor-text relative text-start font-normal text-normal text-partnership dark:text-light md:text-center">
-                        new suppliers meticulously screened using environmental
-                        and social criteria.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </section>
+          <Supplier />
 
           <RightImagePlacement
             heading="Collaborative Engagement with Suppliers"
