@@ -93,7 +93,6 @@ export default function EntityEmissions() {
             tickLabelStyle: { fontSize: 9 },
           },
         ]}
-        grid={{ vertical: true, horizontal: true }}
       />
     </div>
   );

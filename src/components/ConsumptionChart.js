@@ -69,7 +69,6 @@ export default function ConsumptionChart() {
             labelStyle: { fontSize: 9 },
           },
         ]}
-        grid={{ vertical: true, horizontal: true }}
       />
     </div>
   );

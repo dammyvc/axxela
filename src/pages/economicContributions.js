@@ -6,7 +6,7 @@ import Paginator from '@/components/Paginator';
 import Hero from '@/components/Hero';
 import ProgressBar from '@/components/ProgressBar';
 import CountUp from 'react-countup';
-import useOnScreen from '../components/hooks/useOnScreen';
+import useOnScreen from '@/components/hooks/useOnScreen';
 
 import { motion } from 'framer-motion';
 

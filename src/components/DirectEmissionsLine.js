@@ -78,7 +78,6 @@ export default function DirectemssionsLine() {
             labelStyle: { fontSize: 9 },
           },
         ]}
-        grid={{ vertical: true, horizontal: true }}
       />
     </div>
   );
