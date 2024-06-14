@@ -41,7 +41,7 @@ const weAreAxxela = () => {
       </Head>
       <TransitionEffect />
 
-      <Paginator prevLink="/about" nextLink="/highPoints" />
+      <Paginator prevLink="/about" nextLink="/environmentalStewardship" />
 
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout>
@@ -394,7 +394,7 @@ const weAreAxxela = () => {
             </div>
           </section>
 
-          <Footer prevLink="/about" nextLink="/highPoints" />
+          <Footer prevLink="/about" nextLink="/environmentalStewardship" />
         </Layout>
       </main>
     </>

@@ -36,7 +36,7 @@ const contents = () => {
       </Head>
       <TransitionEffect />
 
-      <Paginator prevLink="./" nextLink="/ceoStatement" />
+      <Paginator prevLink="./" nextLink="/highPoints" />
 
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout>
@@ -88,10 +88,10 @@ const contents = () => {
                     }}
                   >
                     <ContentCards
-                      imgSrc="/images/content/ceo_speaks.jpeg"
-                      title="CEO Statement"
-                      description="Our sustainability target extends beyond our business operations, it is rooted in our core values and vision for a transformative future."
-                      linkHref="/ceoStatement"
+                      imgSrc="/images/content/high_points.jpeg"
+                      title="2023 High Points"
+                      description="Highlighting our 2023 sustainability achievements."
+                      linkHref="/highPoints"
                     />
                   </div>
                 </motion.div>
@@ -112,10 +112,10 @@ const contents = () => {
                     }}
                   >
                     <ContentCards
-                      imgSrc="/images/content/we_are_axxela.jpeg"
-                      title="We Are Axxela"
-                      description="We are Axxela, a dynamic force in the energy and utilities sector, jointly owned by Helios Investment Partners LLP and Sojitz Corporation."
-                      linkHref="/weAreAxxela"
+                      imgSrc="/images/content/ceo_speaks.jpeg"
+                      title="CEO Statement"
+                      description="Our sustainability target extends beyond our business operations, it is rooted in our core values and vision for a transformative future."
+                      linkHref="/ceoStatement"
                     />
                   </div>
                 </motion.div>
@@ -143,10 +143,10 @@ const contents = () => {
                       }}
                     >
                       <ContentCards
-                        imgSrc="/images/content/high_points.jpeg"
-                        title="2023 High Points"
-                        description="Highlighting our 2023 sustainability achievements."
-                        linkHref="/highPoints"
+                        imgSrc="/images/content/we_are_axxela.jpeg"
+                        title="We Are Axxela"
+                        description="We are Axxela, a dynamic force in the energy and utilities sector, jointly owned by Helios Investment Partners LLP and Sojitz Corporation."
+                        linkHref="/weAreAxxela"
                       />
                     </div>
                   </motion.div>

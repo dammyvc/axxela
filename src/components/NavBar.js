@@ -185,6 +185,29 @@ const NavBar = () => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                class="lucide lucide-line-chart"
+              >
+                <path d="M3 3v18h18" />
+                <path d="m19 9-5 5-4-4-3 3" />
+              </svg>
+              <CustomLink
+                href="/highPoints"
+                title="High Points"
+                className="text-base font-medium"
+              />
+            </div>
+
+            <div className="w-full h-auto flex items-center gap-x-4 text-partnership hover:text-gray-100 hover:bg-partnership rounded-md px-4 py-3 ease-out duration-500 cursor-pointer dark:text-light">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
                 class="lucide lucide-podcast"
               >
                 <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
@@ -244,29 +267,6 @@ const NavBar = () => {
               <CustomLink
                 href="/weAreAxxela"
                 title="We are Axxela"
-                className="text-base font-medium"
-              />
-            </div>
-
-            <div className="w-full h-auto flex items-center gap-x-4 text-partnership hover:text-gray-100 hover:bg-partnership rounded-md px-4 py-3 ease-out duration-500 cursor-pointer dark:text-light">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-line-chart"
-              >
-                <path d="M3 3v18h18" />
-                <path d="m19 9-5 5-4-4-3 3" />
-              </svg>
-              <CustomLink
-                href="/highPoints"
-                title="High Points"
                 className="text-base font-medium"
               />
             </div>

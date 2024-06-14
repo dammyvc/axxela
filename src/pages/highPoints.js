@@ -36,7 +36,7 @@ const highPoints = () => {
       </Head>
       <TransitionEffect />
 
-      <Paginator prevLink="/weAreAxxela" nextLink="/environmentalStewardship" />
+      <Paginator prevLink="/contents" nextLink="/ceoStatement" />
 
       <main className="flex items-center text-dark w-full min-h-screen">
         <Layout>
@@ -45,10 +45,7 @@ const highPoints = () => {
             backgroundImage="/images/content/high_points.jpeg"
           />
 
-          <Footer
-            prevLink="/weAreAxxela"
-            nextLink="/environmentalStewardship"
-          />
+          <Footer prevLink="/contents" nextLink="/ceoStatement" />
         </Layout>
       </main>
     </>

@@ -38,7 +38,7 @@ const about = () => {
       position: 'Head, EHSQ',
       company: '8th Floor, The Wings Office Complex, Lagos, Nigeria',
       phone: '+234-1-2700-035',
-      email: 'jokoro@axxelagroup.com',
+      email: 'enquiries@axxelagroup.com',
     },
   };
 
@@ -52,7 +52,7 @@ const about = () => {
       position: 'Corporate Communications Lead',
       company: '8th Floor, The Wings Office Complex, Lagos, Nigeria',
       phone: '+234-1-2700-035',
-      email: 'oshitu@axxelagroup.com',
+      email: 'enquiries@axxelagroup.com',
     },
   };
 
