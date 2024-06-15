@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { BarChart } from '@mui/x-charts/BarChart';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const valueFormatter = (value) => `${value} tons`;
@@ -15,23 +16,7 @@ export default function WasteChart() {
 
   return (
     <div className="w-full h-full pb-20 origin-[0px_0px] scale-[1.44837] md:scale-[1] sm:!scale-[0.45] justify-center">
-      <LineChart
-        sx={{
-          [`.${axisClasses.left} .${axisClasses.label}`]: {
-            transform: 'translate(-10px, 0)',
-            fill: '#000',
-          },
-          [`.${axisClasses.root}`]: {
-            [`.${axisClasses.tick}, .${axisClasses.line}`]: {
-              stroke: '#000',
-            },
-            strokeWidth: 1,
-          },
-          [`.${axisClasses.tickLabel}`]: {
-            fontSize: 2,
-            fill: '#000',
-          },
-        }}
+      <BarChart
         slotProps={{
           legend: {
             labelStyle: {
@@ -41,19 +26,20 @@ export default function WasteChart() {
         }}
         width={711}
         height={300}
-        grid={{ vertical: true, horizontal: true }}
         series={[
           {
             curve: 'natural',
             data: ewaste,
             label: 'E-waste',
-            color: '#0b3356',
+            id: 'ewasteId',
+            color: '#76777a',
             valueFormatter,
           },
           {
             curve: 'natural',
             data: plastic,
             label: 'Plastic',
+            id: 'plasticId',
             color: '#979799',
             valueFormatter,
           },
@@ -62,6 +48,7 @@ export default function WasteChart() {
             curve: 'natural',
             data: paper,
             label: 'Paper',
+            id: 'paperId',
             color: '#f5d000',
             valueFormatter,
           },
@@ -69,28 +56,33 @@ export default function WasteChart() {
             curve: 'natural',
             data: solid,
             label: 'Solid',
-            color: '#76777a',
+            id: 'solidId',
+            color: '#0b3356',
             valueFormatter,
           },
           {
             curve: 'natural',
             data: others,
             label: 'Others',
-            color: '#6cafc7',
+            id: 'othersId',
+            color: '#c7d522',
             valueFormatter,
           },
           {
             curve: 'natural',
             data: total,
             label: 'Total',
-            color: '#c7d522',
+            id: 'totalId',
+            color: '#6cafc7',
             valueFormatter,
           },
         ]}
-        xAxis={[{ scaleType: 'point', data: xLabels }]}
+        xAxis={[{ data: xLabels, scaleType: 'band' }]}
         yAxis={[
           {
             tickLabelStyle: { fontSize: 9 },
+            label: 'Weight in tons',
+            labelStyle: { fontSize: 9 },
           },
         ]}
       />
