@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Axxela 2023 Sustainability Report</title>
         <meta
-          name="description"
+          name="Axxela 2023 Interactive Sustainability Report"
           content="Axxela 2023 Interactive Sustainability Report"
         />
       </Head>
