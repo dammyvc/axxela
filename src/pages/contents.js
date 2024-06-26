@@ -112,7 +112,7 @@ const contents = () => {
                     }}
                   >
                     <ContentCards
-                      imgSrc="/images/content/ceo_speaks.jpeg"
+                      imgSrc="/images/content/ceooffice.jpg"
                       title="CEO Statement"
                       description="Our sustainability target extends beyond our business operations, it is rooted in our core values and vision for a transformative future."
                       linkHref="/ceoStatement"
