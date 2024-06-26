@@ -45,7 +45,7 @@ const ceoStatement = () => {
         <Layout>
           <Hero
             text="CEO Statement"
-            backgroundImage="/images/content/ceo_speaks.jpeg"
+            backgroundImage="/images/content/ceooffice.jpg"
           />
 
           <section className="flex w-full justify-center min-h-[50px] relative rounded-[inherit] box-border pt-[100px] px-[24px] pb-[80px] border-solid border-black border-0 md:px-[14.4px] md:pt-[60px] md:pb-[48px] sm:px-[7.2px] sm:pt-[30px] sm:pb-[24px] ">
