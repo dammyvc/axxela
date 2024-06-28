@@ -1,8 +1,8 @@
 import React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 
-const perm = [33];
-const temp = [59];
+const perm = [45];
+const temp = [16];
 const xLabels = ['Employee Category'];
 
 const valueFormatter = (value) => `${value} hours`;

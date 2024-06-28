@@ -4,8 +4,8 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const dataset = [
   {
-    turnover: 167.64,
-    retained: 22.88,
+    turnover: 188.08,
+    retained: 16.59,
     year: '2023',
   },
   {

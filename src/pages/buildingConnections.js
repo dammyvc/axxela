@@ -342,7 +342,7 @@ const buildingConnections = () => {
           <LeftImagePlacement
             heading="Professional Development and Freedom of Association"
             text={fourthParagraph}
-            backgroundImage="/images/misc/association.jpg"
+            backgroundImage="/images/misc/association.jpeg"
             backgroundColor="bg-light dark:bg-dark"
             textColor="text-partnership dark:text-light"
           />
@@ -350,7 +350,7 @@ const buildingConnections = () => {
           <RightImagePlacement
             heading="Compensation and Employee Benefits"
             text={fifthParagraph}
-            backgroundImage="/images/misc/benefits.jpg"
+            backgroundImage="/images/misc/benefits.jpeg"
             backgroundColor="bg-[rgba(199,213,34,0.5)] dark:bg-[rgba(199,213,34,0.2)]"
             textColor="text-partnership dark:text-light"
           />
@@ -358,7 +358,7 @@ const buildingConnections = () => {
           <LeftImagePlacement
             heading="Cultivating Inclusivity"
             text={sixthParagraph}
-            backgroundImage="/images/misc/inclusion.jpg"
+            backgroundImage="/images/misc/inclusion.jpeg"
             backgroundColor="bg-light dark:bg-dark"
             textColor="text-partnership dark:text-light"
           />
@@ -379,7 +379,7 @@ const buildingConnections = () => {
                       className="relative w-full rounded-none text-partnership dark:text-light border-solid border-black border-0 mb-0 p-0 visible md:p-5 !block"
                       style={{ flex: 'unset' }}
                     >
-                      <p className="break-words whitespace-pre-wrap mb-[20px] p-0 cursor-text relative text-start text-base font-semibold italic">
+                      <p className="break-words whitespace-pre-wrap mt-[30px] mb-[20px] p-0 cursor-text relative text-start text-base font-semibold italic">
                         Board categorisation by gender &#40;&#37;&#41;
                       </p>
                     </div>

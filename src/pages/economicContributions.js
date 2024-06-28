@@ -137,7 +137,7 @@ const economicContributions = () => {
           <LeftImagePlacement
             heading="Sustainability Risks and Opportunities"
             text={secondParagraph}
-            backgroundImage="/images/misc/risks.jpg"
+            backgroundImage="/images/misc/risks.jpeg"
             backgroundColor="bg-light dark:bg-dark"
             textColor="text-partnership dark:text-light"
           />
@@ -179,7 +179,7 @@ const economicContributions = () => {
             textColor="text-partnership dark:text-light"
           />
 
-          <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
+          {/* <section className="flex w-full justify-center relative rounded-[inherit] box-border min-h-[46px] bg-[rgba(11,51,86,0.4)] dark:bg-[rgba(11,51,86,0.4)] max-h-none border-solid border-black border-0 pb-20 sm:pb-0">
             <div className="flex flex-auto w-full rounded-[inherit] max-w-[1024px]">
               <div className="flex flex-wrap my-0 mx-auto w-full min-h-[50px] justify-between rounded-[inherit]">
                 <div className="flex relative flex-col grow shrink max-h-full box-border text-start justify-start border-solid border-black border-0 !basis-[calc(100%+0px)] !max-w-[calc(100%+0px)] md:grow-0 md:shrink-0">
@@ -206,7 +206,7 @@ const economicContributions = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <LeftImagePlacement
             heading="Transparent Tax Practices"

@@ -21,7 +21,7 @@ const Details = ({ avatar, name, position, company, phone, email }) => {
           Contact
         </Button>
       </PopoverHandler>
-      <PopoverContent className="w-60 p-1 rounded-xl">
+      <PopoverContent className="w-[270px] p-1 rounded-xl">
         <div className="mb-4 flex items-center gap-4 border-b border-blue-gray-50 pb-4">
           <Avatar className="rounded-full w-1/4" src={avatar} alt={name} />
           <div>

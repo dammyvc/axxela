@@ -38,21 +38,21 @@ const about = () => {
       position: 'Head, EHSQ',
       company: '8th Floor, The Wings Office Complex, Lagos, Nigeria',
       phone: '+234-1-2700-035',
-      email: 'enquiries@axxelagroup.com',
+      email: 'axxelaehssq@axxelagroup.com',
     },
   };
 
   const omolaraShitu = {
-    image: '/images/profiles/Omolara_Shitu.jpeg',
+    image: '/images/profiles/Omolara_Shitu.jpg',
     name: 'Omolara Shitu',
     position: 'Corporate Communications Lead',
     detailsProps: {
-      avatar: '/images/profiles/Omolara_Shitu.jpeg',
+      avatar: '/images/profiles/Omolara_Shitu.jpg',
       name: 'Omolara Shitu',
       position: 'Corporate Communications Lead',
       company: '8th Floor, The Wings Office Complex, Lagos, Nigeria',
       phone: '+234-1-2700-035',
-      email: 'enquiries@axxelagroup.com',
+      email: 'corpcomms@axxelagroup.com',
     },
   };
 
