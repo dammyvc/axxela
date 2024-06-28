@@ -79,6 +79,10 @@ export default function NonRenewableChart() {
           },
         ]}
       />
+      <p className="text-base text-center italic dark:text-white scale-[1.5] w-full pt-10 hidden ml-[200px] sm:inline-block">
+        There was 11% reduction in non-renewable energy consumption across all
+        operational areas within the organisation
+      </p>
     </div>
   );
 }

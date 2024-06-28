@@ -86,6 +86,10 @@ export default function WasteChart() {
           },
         ]}
       />
+      <p className="text-base text-center italic dark:text-white scale-[1.5] w-full pt-10 hidden ml-[200px] sm:inline-block">
+        The increase in waste volume is attributed to on-premises resumption, a
+        larger staff size, and additional projects.
+      </p>
     </div>
   );
 }

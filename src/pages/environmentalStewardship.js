@@ -156,7 +156,7 @@ const environmentalStewardship = () => {
                     <div className="max-w-full w-full mb-[8px] sm:mb-[200px]">
                       <RenewableChart />
 
-                      <p className="text-xs text-center italic dark:text-white">
+                      <p className="text-xs text-center italic dark:text-white sm:hidden">
                         The increase in energy consumption is attributed to our
                         implementation of full accounting for renewable energy
                         sources in 2023, considering that the recorded energy
@@ -192,7 +192,7 @@ const environmentalStewardship = () => {
                     </div>
                     <div className="max-w-full w-full mb-[8px] sm:mb-[200px]">
                       <NonRenewableChart />
-                      <p className="text-xs text-center italic dark:text-white">
+                      <p className="text-xs text-center italic dark:text-white sm:hidden">
                         There was 11% reduction in non-renewable energy
                         consumption across all operational areas within the
                         organisation
@@ -227,7 +227,7 @@ const environmentalStewardship = () => {
                     </div>
                     <div className="max-w-full w-fullmb-[8px] sm:mb-[200px]">
                       <ConsumptionChart />
-                      <p className="text-xs text-center italic dark:text-white">
+                      <p className="text-xs text-center italic dark:text-white sm:hidden">
                         *Downstream distribution of our products via CNG trucks
                         to customer locations. Energy consumption increased from
                         2022 due to increased customer pool.
@@ -327,7 +327,7 @@ const environmentalStewardship = () => {
                     </div>
                     <div className="max-w-full w-full mb-[8px] sm:mb-[200px]">
                       <EntityEmissions />
-                      <p className="text-xs text-center italic dark:text-white">
+                      <p className="text-xs text-center italic dark:text-white sm:hidden">
                         The increase in staff strength and operational
                         activities contributed to the overall increment.
                       </p>
@@ -398,7 +398,7 @@ const environmentalStewardship = () => {
                     </div>
                     <div className="max-w-full w-full mb-[8px] sm:mb-[200px]">
                       <WasteChart />
-                      <p className="text-xs text-center italic dark:text-white">
+                      <p className="text-xs text-center italic dark:text-white sm:hidden">
                         The increase in waste volume is attributed to
                         on-premises resumption, a larger staff size, and
                         additional projects.

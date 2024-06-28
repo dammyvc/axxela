@@ -383,7 +383,10 @@ const weAreAxxela = () => {
                           opportunities for inorganic growth.
                         </h4>
 
-                        <Link href="#" target="_blank">
+                        <Link
+                          href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-SR.pdf#page=9"
+                          target="_blank"
+                        >
                           <Btn text="More About Axxela" />
                         </Link>
                       </motion.div>

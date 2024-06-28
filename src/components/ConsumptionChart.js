@@ -70,6 +70,11 @@ export default function ConsumptionChart() {
           },
         ]}
       />
+      <p className="text-base text-center italic dark:text-white scale-[1.5] w-full pt-10 hidden ml-[200px] sm:inline-block">
+        *Downstream distribution of our products via CNG trucks to customer
+        locations. Energy consumption increased from 2022 due to increased
+        customer pool.
+      </p>
     </div>
   );
 }
