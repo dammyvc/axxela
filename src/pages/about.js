@@ -188,7 +188,7 @@ const about = () => {
                         <p className="break-words whitespace-pre-wrap p-0 mb-[0.55em] cursor-text relative text-base font-light leading-tight text-dark dark:text-light">
                           This report has received&nbsp;
                           <Link
-                            href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-SR.pdf#page=52"
+                            href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-Sustainability-Report.pdf#page=52"
                             target="_blank"
                             className="underline font-bold italic text-sustainable"
                           >
