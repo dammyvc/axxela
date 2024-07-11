@@ -31,7 +31,7 @@ const Footer = ({ prevLink, nextLink }) => {
             <div className="flex flex-1 items-center justify-center py-[69px] pl-[3.55114vw] pr-[3.55114vw] md:py-[59px] md:pl-[3.125vw] md:pr-[3.125vw] sm:py-[39px] sm:pl-[6.4vw] sm:pr-[6.4vw] rounded-[inherit]">
               <div>
                 <Link
-                  href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-SR.pdf"
+                  href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-Sustainability-Report.pdf"
                   scroll={false}
                   className="inline-block mb-[0.55em]"
                   target={'_blank'}
