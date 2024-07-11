@@ -167,7 +167,7 @@ const ceoStatement = () => {
                       <Link
                         className="inline-block m-0"
                         style={{ alignSelf: 'flex-start' }}
-                        href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-SR.pdf#page=3"
+                        href="https://www.axxelagroup.com/wp-content/uploads/2024/09/Axxela-2023-Sustainability-Report.pdf#page=3"
                         target="_blank"
                       >
                         <Btn text="Read Full Statement" />
