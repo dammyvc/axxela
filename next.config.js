@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@mui/x-charts'],
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   webpack(config, { isServer }) {
     // Add a loader for font files
     config.module.rules.push({
