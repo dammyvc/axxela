@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Logo from './Logo.js';
 import {
@@ -12,9 +12,9 @@ import { motion } from 'framer-motion';
 import { Tooltip } from '@material-tailwind/react';
 import useThemeSwitcher from './hooks/useThemeSwitcher.js';
 
-const CustomLink = ({ href, title, className = '' }) => {
+const CustomLink = ({ href, title, className = '', onClick }) => {
   return (
-    <Link href={href} className={'${className}'}>
+    <Link href={href} className={`${className}`} onClick={onClick}>
       {title}
     </Link>
   );
@@ -22,30 +22,32 @@ const CustomLink = ({ href, title, className = '' }) => {
 
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  // Close menu if clicked outside of it
   useEffect(() => {
-    const toggleButton = document.getElementById('toggleButton');
-    const cardContainer = document.getElementById('cardContainer');
-    const closeButton = document.getElementById('closeButton');
-
-    const toggleMenu = () => {
-      cardContainer.style.width =
-        cardContainer.style.width === '350px' ? '0' : '350px';
+    const handleOutsideClick = (event) => {
+      const cardContainer = document.getElementById('cardContainer');
+      if (cardContainer && !cardContainer.contains(event.target) && menuOpen) {
+        closeMenu();
+      }
     };
 
-    const closeMenu = () => {
-      cardContainer.style.width = '0';
-    };
-
-    toggleButton.addEventListener('click', toggleMenu);
-    closeButton.addEventListener('click', closeMenu);
-
-    // Cleanup event listeners on unmount
+    document.addEventListener('mousedown', handleOutsideClick);
+    
+    // Cleanup event listener on component unmount
     return () => {
-      toggleButton.removeEventListener('click', toggleMenu);
-      closeButton.removeEventListener('click', closeMenu);
+      document.removeEventListener('mousedown', handleOutsideClick);
     };
-  }, []);
+  }, [menuOpen]);
 
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between fixed bg-inherit z-[969] bg-white dark:bg-dark sm:px-8">
@@ -99,7 +101,7 @@ const NavBar = () => {
           className="border border-blue-gray-50 rounded-xl bg-white px-4 py-3 shadow-xl shadow-black/10 text-partnership font-medium"
           content="Toggle Menu"
         >
-          <button id="toggleButton">
+          <button onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -107,10 +109,10 @@ const NavBar = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu dark:stroke-light"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-menu dark:stroke-light"
             >
               <line x1="4" x2="20" y1="12" y2="12" />
               <line x1="4" x2="20" y1="6" y2="6" />
@@ -126,10 +128,12 @@ const NavBar = () => {
 
       <div
         id="cardContainer"
-        className="fixed top-0 right-0 h-full w-0 overflow-hidden bg-background bg-opacity-90 backdrop-blur-lg shadow-lg transition-all duration-300 z-50 dark:bg-dark"
+        className={`fixed top-0 right-0 h-full overflow-hidden bg-background bg-opacity-90 backdrop-blur-lg shadow-lg transition-all duration-300 z-50 dark:bg-dark ${
+          menuOpen ? 'w-[350px]' : 'w-0'
+        }`}
       >
         <button
-          id="closeButton"
+          onClick={closeMenu}
           className="text-red-500 absolute top-6 right-6 z-30"
         >
           <svg
@@ -139,10 +143,10 @@ const NavBar = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-x"
           >
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
@@ -159,10 +163,10 @@ const NavBar = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-home"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-home"
               >
                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                 <polyline points="9 22 9 12 15 12 15 22" />
@@ -170,7 +174,8 @@ const NavBar = () => {
               <CustomLink
                 href="/contents"
                 title="Home"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -182,10 +187,10 @@ const NavBar = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-line-chart"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-line-chart"
               >
                 <path d="M3 3v18h18" />
                 <path d="m19 9-5 5-4-4-3 3" />
@@ -193,7 +198,8 @@ const NavBar = () => {
               <CustomLink
                 href="/highPoints"
                 title="High Points"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -218,7 +224,8 @@ const NavBar = () => {
               <CustomLink
                 href="/ceoStatement"
                 title="CEO Statement"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -245,7 +252,8 @@ const NavBar = () => {
               <CustomLink
                 href="/about"
                 title="About this Report"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -267,7 +275,8 @@ const NavBar = () => {
               <CustomLink
                 href="/weAreAxxela"
                 title="We are Axxela"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -290,7 +299,8 @@ const NavBar = () => {
               <CustomLink
                 href="/environmentalStewardship"
                 title="Environmental Stewardship"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -316,7 +326,8 @@ const NavBar = () => {
               <CustomLink
                 href="/buildingConnections"
                 title="Buidling Connections"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -340,7 +351,8 @@ const NavBar = () => {
               <CustomLink
                 href="/communityInitiatives"
                 title="Community Initiatives"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -366,7 +378,8 @@ const NavBar = () => {
               <CustomLink
                 href="/economicContributions"
                 title="Economic Contributions"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -391,7 +404,8 @@ const NavBar = () => {
               <CustomLink
                 href="/gallery"
                 title="Gallery"
-                className="text-base font-medium"
+                className="text-base font-medium menu-link"
+                onClick={closeMenu}
               />
             </div>
 
@@ -399,7 +413,8 @@ const NavBar = () => {
               <a
                 href="https://www.axxelagroup.com"
                 target="_blank"
-                className="underline"
+                className="underline menu-link"
+                onClick={closeMenu}
               >
                 Axxela Group
               </a>{' '}
